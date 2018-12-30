@@ -1,0 +1,150 @@
+/* 在首页的index.less去导入公共样式文件 */
+
+@import './base.less';
+
+
+
+//轮播图区域
+#slide {
+    img {
+        width: 100vw;
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: #fff;
+    }
+}
+
+
+// 导航栏区域
+#nav{
+    padding: .2rem 0;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+           
+            width: 25%;
+            a{
+                display: block;
+                text-align: center;
+
+                img{
+                    width: .4rem;
+                    height: .4rem;
+                }
+                p{
+                    padding: .05rem 0;
+                }
+            }
+        }
+    }
+}
+
+//主体商品区域
+#main {
+    background-color: #f6f6f6;
+    padding: .1rem;
+    padding-bottom: .6rem;
+    .jd-seckill {
+        background-color: @whiteColor;
+        box-shadow: 0px 0px 2px @gray;
+        .seckill-title {
+            height: .3rem;
+            line-height: .3rem;
+            .seckill-icon {
+                width: .2rem;
+                height: .25rem;
+                margin-left: .05rem;
+            }
+            .seckill-name {
+                color: @mainColor;
+                margin-left: .05rem;
+            }
+            .seckill-time {
+                margin-left: .05rem;
+                >span{
+                    display: inline-block;
+                    width: .15rem;
+                    height: .15rem;
+                    line-height: .15rem;
+                    text-align: center;
+                    &:not(:nth-child(3n)){
+                        color: @whiteColor;
+                        background-color: black;
+                    }
+                }
+                
+            }
+            .seckill-more {
+                float: right;
+                margin-right: .1rem;
+            }
+        }
+        .jd-content {
+            padding: .1rem;
+            ul {
+                display: flex;
+                li {
+                    flex: 1;
+                    &+li {
+                        border-left: 1px solid @gray;
+                    }
+                    a {
+                        display: block;
+                        text-align: center;
+                        img {
+                            width: 100%;
+                        }
+                        p {
+                            font-size: .12rem;
+                            &:first-of-type {
+                                color: @mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 京东超市
+    .jd-product-title{
+        border-bottom:1px solid @gray;
+        h4{
+            padding-left: .25rem;
+            position: relative;
+            font-weight: normal;
+            line-height: .3rem;
+            &::before{
+                content: "";
+                width: .04rem;
+                height: .13rem;
+                position: absolute;
+                left: .15rem;
+                top: .09rem;
+                background-color: @mainColor;
+            }
+
+        }
+    }
+
+    .jd-market-content{
+       display: flex;
+       >div{
+           flex: 1;
+           a{
+               display: block;
+               img{
+                   width: 100%;
+               }
+           }
+       }
+    }
+
+    }
+}
+
+
+
+
+
